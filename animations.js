@@ -86,7 +86,7 @@ function drawMapAnimation(v){
 	x.globalAlpha=1;
 	x.fillStyle="#2e2c2c";
 	x.fillRect(0,0,c.width,c.height);
-	x.globalAlpha=.65;
+	x.globalAlpha=1;
 	x.drawImage(v[1].mapImg,0,0,c.width,c.height);
 
 	var cx=c.width/2, cy=c.height/2;
@@ -106,7 +106,7 @@ function drawMapAnimation(v){
 					x.moveTo(x1,y1);
 					x.lineTo(x2,y2);
 					x.lineWidth=1+7/(1+d/10)*v[1].vx;
-					x.strokeStyle=`hsla(225,90%,95%,${(1 - Math.pow(d / 165 * v[1].vx , .9))/ (50+Math.sin(v[1].f/30+(j+i))*49)}`;
+					x.strokeStyle=`hsla(225,100%,35%,${(1 - Math.pow(d / 165 * v[1].vx , .9))/ (300+Math.sin(v[1].f/75+(j+i))*299)}`;
 					x.stroke();
 				}
 			}
