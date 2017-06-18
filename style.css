@@ -301,7 +301,7 @@ html,body{
 	width:100%;
 	height:125.25vw;
 	background-size: 100% 100%;
-	background-image: url(decentralized.png);
+	background: #2e2c2c url(decentralized.png);
 }
 
 .header9Texta{
@@ -466,5 +466,19 @@ html,body{
 
 canvas{
 	display:block;
+	background:#2e2c2c;
 }
 
+#noscript_map{
+	width:50%;
+	height:30vw;
+	background:#2e2c2c;
+}
+
+img{
+	display:block;
+}
+
+.clear{
+	clear:both;
+}

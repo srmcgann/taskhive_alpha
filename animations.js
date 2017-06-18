@@ -2,6 +2,10 @@ function init(){
 	
 	var v=[];
 	v.push({});
+	document.getElementById("noscript_map").remove();
+	document.getElementsByClassName("header9")[0].style.background="none";
+	document.getElementsByClassName("header9")[0].style.backgroundSize="100% 100%";
+	document.getElementsByClassName("header9")[0].style.backgroundImage="url(decentralized.png)";
 	v[0].c = document.querySelector("#pointAnimation");
 	v[0].c.className = "pointCanvas";
 	v[0].x = v[0].c.getContext("2d");
@@ -230,6 +234,18 @@ function drawPointAnimation(v){
 
 function rand(s){
 	return parseFloat('0.'+Math.sin(s+3e4).toString().substr(6));
+}
+
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
 }
 
 window.onload = function(){
